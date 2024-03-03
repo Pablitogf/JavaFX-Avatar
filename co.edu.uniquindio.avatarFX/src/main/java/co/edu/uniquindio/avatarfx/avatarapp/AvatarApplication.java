@@ -10,8 +10,8 @@ import java.io.IOException;
 public class AvatarApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(AvatarApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        FXMLLoader fxmlLoader = new FXMLLoader(AvatarApplication.class.getResource("Avatar.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("App Avatar");
         stage.setScene(scene);
         stage.show();
