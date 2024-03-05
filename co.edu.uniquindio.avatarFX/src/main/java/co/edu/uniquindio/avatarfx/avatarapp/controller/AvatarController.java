@@ -2,13 +2,14 @@ package co.edu.uniquindio.avatarfx.avatarapp.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import co.edu.uniquindio.avatarfx.avatarapp.model.Avatar;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.RadioButton;
 
 public class AvatarController {
 
@@ -20,6 +21,18 @@ public class AvatarController {
 
     @FXML
     private Button btnFinalizarRegistro;
+
+    @FXML
+    private RadioButton rbAvatarEsandar;
+
+    @FXML
+    private RadioButton rbAvatarPremiun;
+
+    @FXML
+    private RadioButton rbAvatarViip;
+
+    @FXML
+    private ToggleGroup tgCategoria;
 
     @FXML
     private TextField txtApellido;
@@ -61,7 +74,10 @@ public class AvatarController {
         avatar.setEstatus(txtEstatus.getText());
         avatar.setCelular(txtCelular.getText());
 
-        txtResultadoRegsitro.setText(avatar.toString());
+        txtResultadoRegsitro.setText(avatar.toString()+ "\n");
+        txtResultadoRegsitro.appendText(String.valueOf(rbAvatarEsandar.isSelected())+ "\n");
+        txtResultadoRegsitro.appendText(String.valueOf(rbAvatarViip.isSelected())+ "\n");
+        txtResultadoRegsitro.appendText(String.valueOf(rbAvatarPremiun.isSelected())+ "\n");
 
     }
 
